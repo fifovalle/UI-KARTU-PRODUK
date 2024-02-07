@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Istok Web", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0f0e17;
+}
+
+.kartu {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.kartu::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #e53170;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+.kartu:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+.kartu::after {
+    content: "GAMING";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 6em;
+    color: rgba(115, 112, 112, 0.1);
+}
+
+.kartu .wadahGambar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.kartu .konten {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.kartu .konten h3 {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.kartu .konten .harga {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.kartu .konten .beli {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #fffffe;
+    text-decoration: none;
+    background: #e53170;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.kartu:hover .konten .beli {
+    top: 0;
+    opacity: 1;
+}
+
+.gambar {
+    height: 290px;
+    width: auto;
+}
